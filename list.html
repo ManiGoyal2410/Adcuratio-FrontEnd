@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            List of Employees
+        </title>
+        <link rel="stylesheet" type="text/css" href="./css/main2.css">
+    </head>
+    <body>
+      <!-- <h1> Welcome</h1>--> 
+      <div id="bdy">
+        <br>
+        <div id="btn">
+                <input type="button" id="logOutButton" value="LOGOUT" onclick="logOutButton()">
+         </div>
+        <br>
+        <br>
+        <br>
+        <div id="tbl">
+        <table>
+            <caption style="color: black;font-size: xx-large;padding-bottom: 30px;">List of Employees</caption>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>NAME</th>
+                    <th>AGE</th>
+                    <th>GENDER</th>
+                    <th>EMAIL</th>
+                    <th>PHONE NO.</th>
+                </tr>
+            </thead>
+            <tbody>
+
+            </tbody>
+        </table>
+    </div>
+</div>
+    </body>
+    <!--jQuery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        var data = [
+        {
+    "id": 1,
+    "name": "test1",
+    "age": "11",
+    "gender": "male",
+    "email": "test1@gmail.com",
+    "phoneNo": "9191919191"
+  },
+  {
+    "id": 2,
+    "name": "test2",
+    "age": "12",
+    "gender": "male",
+    "email": "test2@gmail.com",
+    "phoneNo": "9292929292"
+  },
+  {
+    "id": 3,
+    "name": "test3",
+    "age": "13",
+    "gender": "male",
+    "email": "test3@gmail.com",
+    "phoneNo": "9393939393"
+  }, 
+  {
+    "id": 4,
+    "name": "test4",
+    "age": "14",
+    "gender": "male",
+    "email": "test4@gmail.com",
+    "phoneNo": "9494949494"
+  } 
+
+];
+
+for(var i = 0, len = data.length; i < len; i++) {
+    var temp = '<tr><td>' + data[i].id + '</td>';
+    temp+= '<td>' + data[i].name+ '</td>';
+    temp+= '<td>' + data[i].age + '</td>';
+    temp+= '<td>' + data[i].gender + '</td>';
+    temp+= '<td>' + data[i].email + '</td>';
+    temp+= '<td>' + data[i].phoneNo + '</td>';
+    '</tr>';
+    $('table tbody').append(temp);
+}
+    </script>
+    <!--custom script-->
+    <script src="./js/main.js"></script>
+   <!-- <script src="./js/main2.js"></script>-->
+</html>

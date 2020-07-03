@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Adcuratio-Login
+        </title>
+        <link rel="stylesheet" type="text/css" href="./css/main.css">
+        
+    </head>
+    <body>
+        
+            <div class="boxlogin">
+                    <img src="./images/avatar.png" class="avatar" >
+                    <h1>
+                        
+                            Login Here
+                        
+                    </h1>
+                    <form>
+                        
+                        <input type="text" name="" placeholder="Enter Username" id="uname" required>
+                        
+                        <input type="password" name="" placeholder="Enter Password" 
+                        id="passwd" required 
+                        pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&*]).{8,}" 
+                        title="Password must contain 1 uppercase 1 lowercase 1 number 1 symbol and must be of minimum length 8"
+                        >
+                        <input type="submit" name="" id="login" value="Login" onclick="checkValid()">
+                        <a href="#">Forgot Password?</a>
+                        <br>
+                        <a href="#">Not a member Yet?..Signin</a>
+                      
+                    </form>
+            
+            </div>
+            
+       
+    </body>
+    <!--custom script-->
+    <script src="./js/main.js"></script>
+</html>
