@@ -13,21 +13,21 @@ var admins=[
     }
         
 ]
-
+//making a list of all eligible people who can login into system
 function checkValid()
 {
     var username=document.getElementById("uname").value;
     var password=document.getElementById("passwd").value;
     for(i=0;i<admins.length;i++)
     {
-            if(username===admins[i].username&&password===admins[i].password)
+            if(username===admins[i].username&&password===admins[i].password)          //checking if entered username and password mathces with any 1 in the list
             {
                 //console.log("login successful");
-                localStorage.setItem("username", username);
+                localStorage.setItem("username", username);   //storing the username and password in local storage   
                 localStorage.setItem("password", password);
                 alert("You are successfully Logged in");
                 
-                window.open('list.html');
+                window.open('list.html');  //opening list of employees as soon as login is successful
                
                 return;
             }
@@ -40,16 +40,13 @@ function checkValid()
 
 }
 function logOutButton(){
-    //let logOutButton = document.getElementById('logOutButton');
-    // logOutButton.className = "log-out-button"
-    // logOutButton.innerText = "Log Out"
-    // signDiv.append(logOutButton)
    
-      localStorage.clear();
+   
+      localStorage.clear(); //clearing the local storage upon logout
       
-      document.write("<p>Please login again</p><a href=index.html>Login Page</a>");
+      document.write("<h1>Please login again<br><a href=index.html>Click Here to Login</a></h1>");
       alert("you are logged out") ;
       //window.open('index.html');
-      // We clear localStorage like so
+      
 }
 
